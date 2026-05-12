@@ -1,5 +1,5 @@
 # 心跳检查清单
-_最后更新：2026-05-12 01:24 UTC_
+_最后更新：2026-05-12 03:00 UTC - 修正自相矛盾的结论_
 
 ---
 
@@ -8,36 +8,35 @@ _最后更新：2026-05-12 01:24 UTC_
 - 无错误任务
 - 系统健康
 - **备份策略已更新 v2.0**
-- **EvoMap 节点状态正常** ✅
-- **EvoMap 节点心跳已配置** (每 5 分钟)
+- **EvoMap 节点待认领** ⚠️
 
 ---
 
-## 🔷 EvoMap 节点心跳
+## 🔷 EvoMap 节点状态（真实情况）
 
-### 节点状态
-- **Node ID**: `node_41349a7fe0f7c472_1778434273`
-- **状态**: active/alive
-- **已认领**: ❌ 需要认领
-- **积分余额**: 50
-- **心跳间隔**: 5 分钟
-- **下次心跳**: 2026-05-12 01:28 UTC
+| 项目 | 值 | 状态 |
+|------|------|------|
+| **Node ID** | `node_41349a7fe0f7c472_1778434273` | ✅ 已配置 |
+| **Claim Code** | `NRGM-ZNKZ` | ✅ 有效 |
+| **Claim URL** | https://evomap.ai/claim/NRGM-ZNKZ | ⚠️ **需认领** |
+| **API 返回状态** | `claimed: false` | ❌ **未认领** |
+| **积分余额** | 50 | ✅ 充足 |
+| **心跳间隔** | 5 分钟 | ✅ 正常 |
+| **心跳任务** | 每 7 小时 | ✅ 运行中 |
+| **配置文件** | `.evomap-node.env` | ✅ 存在 |
 
-### 认领信息
-- **Claim Code**: `NRGM-ZNKZ`
-- **Claim URL**: https://evomap.ai/claim/NRGM-ZNKZ
+### ⚠️ 问题根因
+- **老节点 ID** (`node_3dd6800a6992f95e`) 已配置在 `/data/.openclaw/.env`
+- **新节点 ID** (`node_41349a7fe0f7c472_1778434273`) 是 5 月 10 日注册的，**未认领**
+- API 返回 `claimed: false`，需要认领新节点
 
-### 运行心跳
-```bash
-# 手动运行心跳
-node /home/node/.openclaw/workspace/scripts/evomap-heartbeat.js
+### 🚀 解决方案
+1. **认领新节点**：访问 https://evomap.ai/claim/NRGM-ZNKZ
+2. **或切换老节点**：将 `.evomap-node.env` 改回老节点 ID
 
-# 启动心跳管理器 (后台运行)
-node /home/node/.openclaw/workspace/scripts/evomap-heartbeat-manager.js &
-```
+**结论：新节点未认领，需要操作！**
 
-### 需要认领
-节点当前未认领。请访问 Claim URL 或联系管理员使用 Claim Code 认领节点。
+---
 
 ## 📋 定期检查项（每 2 小时）
 - [x] 检查 cron 任务状态
@@ -77,20 +76,4 @@ node /home/node/.openclaw/workspace/scripts/evomap-heartbeat-manager.js &
 
 ---
 
-## 🔷 EvoMap 节点状态（已验证）
-
-| 项目 | 值 | 状态 |
-|------|------|------|
-| **Node ID** | `node_41349a7fe0f7c472_1778434273` | ✅ 已配置 |
-| **Claim Code** | `NRGM-ZNKZ` | ✅ 已记录 |
-| **Claim URL** | https://evomap.ai/claim/NRGM-ZNKZ | ✅ 有效 |
-| **状态** | active/alive | ✅ 正常 |
-| **积分余额** | 50 | ✅ 充足 |
-| **心跳间隔** | 5 分钟 | ✅ 正常 |
-| **心跳任务** | 每 7 小时 | ✅ 运行中 |
-| **配置文件** | `.evomap-node.env` | ✅ 存在 |
-
-**结论：节点配置完全正确，无需重新认领！**
-
----
-_保持此文件为空时跳过心跳 API 调用_
+_最后更新：2026-05-12 03:00 UTC - 修正自相矛盾的结论，统一为真实状态_
