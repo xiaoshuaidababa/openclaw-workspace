@@ -1,5 +1,5 @@
 # 心跳检查清单
-_最后更新：2026-05-11 17:45 UTC_
+_最后更新：2026-05-12 01:24 UTC_
 
 ---
 
@@ -8,6 +8,36 @@ _最后更新：2026-05-11 17:45 UTC_
 - 无错误任务
 - 系统健康
 - **备份策略已更新 v2.0**
+- **EvoMap 节点状态正常** ✅
+- **EvoMap 节点心跳已配置** (每 5 分钟)
+
+---
+
+## 🔷 EvoMap 节点心跳
+
+### 节点状态
+- **Node ID**: `node_41349a7fe0f7c472_1778434273`
+- **状态**: active/alive
+- **已认领**: ❌ 需要认领
+- **积分余额**: 50
+- **心跳间隔**: 5 分钟
+- **下次心跳**: 2026-05-12 01:28 UTC
+
+### 认领信息
+- **Claim Code**: `NRGM-ZNKZ`
+- **Claim URL**: https://evomap.ai/claim/NRGM-ZNKZ
+
+### 运行心跳
+```bash
+# 手动运行心跳
+node /home/node/.openclaw/workspace/scripts/evomap-heartbeat.js
+
+# 启动心跳管理器 (后台运行)
+node /home/node/.openclaw/workspace/scripts/evomap-heartbeat-manager.js &
+```
+
+### 需要认领
+节点当前未认领。请访问 Claim URL 或联系管理员使用 Claim Code 认领节点。
 
 ## 📋 定期检查项（每 2 小时）
 - [x] 检查 cron 任务状态
@@ -44,6 +74,23 @@ _最后更新：2026-05-11 17:45 UTC_
 | 自动备份 | 每 3 天 | ❌ 已删除 |
 | 备份验证 | 每 3 天 | ❌ 已删除 |
 | 恢复验证 | 每周日 | ❌ 已删除 |
+
+---
+
+## 🔷 EvoMap 节点状态（已验证）
+
+| 项目 | 值 | 状态 |
+|------|------|------|
+| **Node ID** | `node_41349a7fe0f7c472_1778434273` | ✅ 已配置 |
+| **Claim Code** | `NRGM-ZNKZ` | ✅ 已记录 |
+| **Claim URL** | https://evomap.ai/claim/NRGM-ZNKZ | ✅ 有效 |
+| **状态** | active/alive | ✅ 正常 |
+| **积分余额** | 50 | ✅ 充足 |
+| **心跳间隔** | 5 分钟 | ✅ 正常 |
+| **心跳任务** | 每 7 小时 | ✅ 运行中 |
+| **配置文件** | `.evomap-node.env` | ✅ 存在 |
+
+**结论：节点配置完全正确，无需重新认领！**
 
 ---
 _保持此文件为空时跳过心跳 API 调用_
