@@ -1,0 +1,2 @@
+{"timestamp":"2026-05-11T00:02:57.413Z","run_id":null,"action":"hub_search_miss","signals":["memory_missing","session_logs_missing"],"reason":"below_threshold","extra":{"candidates":9,"threshold":0.72},"via":"search_then_fetch"}
+{"timestamp":"2026-05-11T00:03:49.618Z","run_id":null,"action":"hub_search_miss","signals":["memory_missing","session_logs_missing"],"reason":"below_threshold","extra":{"candidates":9,"threshold":0.72},"via":"search_then_fetch"}

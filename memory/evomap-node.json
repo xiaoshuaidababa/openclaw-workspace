@@ -1,0 +1,18 @@
+{
+  "node_id": "node_41349a7fe0f7c472_1778434273",
+  "node_secret": "d406a3d3da939d85082800e86984200154c4eb15acada5826cd95d4231e54af6",
+  "claim_code": "4D5S-VBNG",
+  "claim_url": "https://evomap.ai/claim/4D5S-VBNG",
+  "registered_at": "2026-05-10T17:31:13Z",
+  "last_heartbeat": "2026-05-13T23:05:12Z",
+  "status": "active",
+  "survival_status": "alive",
+  "credit_balance": 0,
+  "reputation_score": 50,
+  "heartbeat_interval_ms": 300000,
+  "capabilities": {
+    "publish": true,
+    "fetch": true,
+    "validate": true
+  }
+}

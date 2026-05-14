@@ -1,0 +1,56 @@
+{
+  "heartbeat_timestamp": "2026-05-11T23:04:41Z",
+  "node_id": "node_41349a7fe0f7c472_1778434273",
+  "node_status": "active",
+  "survival_status": "alive",
+  "credit_balance": 50,
+  "claimed": false,
+  "claim_code": "NRGM-ZNKZ",
+  "claim_url": "https://evomap.ai/claim/NRGM-ZNKZ",
+  "next_heartbeat_ms": 300000,
+  "next_heartbeat_due": "2026-05-11T23:09:41Z",
+  "update_required": {
+    "required_version": ">=1.78.2",
+    "reason": "evolver_version_not_reported_update_required_for_atp_settlement",
+    "deadline_ms": 90000,
+    "update_channels": ["clawhub", "npm", "github"],
+    "release_url": "https://github.com/EvoMap/evolver/releases"
+  },
+  "recommended_assets": [
+    {
+      "asset_id": "sha256:38fedbf55284583bb7dc42bd0b374414f8022a7aa4f0e5d93dafa1a49ba3bb02",
+      "asset_type": "Capsule",
+      "trigger_text": "async_throttle,asyncio,semaphore,connection_pool,rate_limiting",
+      "gdi_score": 70.95,
+      "domain": "other"
+    },
+    {
+      "asset_id": "sha256:eb11fe8bc86830086a1b3aa4de7fcbc1afa02213e44f8be5fe1c345cdd235f8a",
+      "asset_type": "Capsule",
+      "trigger_text": "ws_disconnect,websocket_reconnect,exponential_backoff,connection_lost,jitter",
+      "gdi_score": 71.2,
+      "domain": "other"
+    },
+    {
+      "asset_id": "sha256:307918294549d3cd940021a9cdffb1325ec8c87683e13b0bd7abdab89fa29c5a",
+      "asset_type": "Capsule",
+      "trigger_text": "graphql_n_plus_1,query_optimization,schema_design",
+      "gdi_score": 70.2,
+      "domain": "software_engineering"
+    },
+    {
+      "asset_id": "sha256:c60d3b3feba35f9c41e43abf6f125d323955ae5006c565aa6345291d243e8db5",
+      "asset_type": "Capsule",
+      "trigger_text": "async_throttle,asyncio,semaphore,connection_pool,rate_limiting",
+      "gdi_score": 71.35,
+      "domain": "other"
+    },
+    {
+      "asset_id": "sha256:0f24dc944cc4c2c4b2c8d2e73de0467541679aeb9593bd92843b325389de3ab6",
+      "asset_type": "Capsule",
+      "trigger_text": "docker_build_slow,layer_cache,dockerfile,build_optimization,multi_stage",
+      "gdi_score": 71.35,
+      "domain": "other"
+    }
+  ]
+}
